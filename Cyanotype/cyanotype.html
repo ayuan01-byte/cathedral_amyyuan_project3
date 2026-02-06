@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>cyanotype survey</title>
+<title>cyanotype design</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="cyanotype survey">
+<meta name="description" content="cyanotype design">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="cyan.css">
+<link rel="stylesheet" href="cyanotype.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -34,30 +34,11 @@
         <img class="img object draggable" src="cyanotype/plant3.png" alt="flower" style="right: 180px; top: 540px; width: 130px;">
     </div>
 </div>
-
-<!-- Scrollable questions section -->
-<div class="scrolling-section">
-    <!-- Learned custom select menu (with html and css) from video: https://www.youtube.com/watch?v=bB14uo0Tu5A&list=LL&index=1 -->
-    <div class="questions-container">
-        <h2>question: who owns this—artist or machine?</h2>
-            <div class="custom-select">
-                <select id="question1">
-                    <option value="">select an answer</option>
-                    <option value="the artist simply chose what plant/photo to include">the artist</option>
-                    <option value="UV lightbox exposes the cyanotypes">the machine</option>
-                    <option value="both, but who owns the result?">both</option>
-                </select>
-                <span class="custom-arrow"></span>
-            </div>
-            <div id="result1"></div>
-        <p class="intention">Machines help and replace artists, changing what it means to “make” art.</p>
-            <div class="external-link">
-                <a href="https://www.canva.com/design/DAHAa7p1lYw/vIioo570mehDXYeWsWSlMw/edit?utm_content=DAHAa7p1lYw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Click here to join a collaborative exercise</a>
-            </div>
+    <div class="button-container" style="background-color: white;">
+        <button onclick="document.location='questions.html'">collaborate</button>
     </div>
-</div>
-    <script src="cyan.js"></script>
-    <script src="drag.js"></script>
+
+    <script src="cyanotype.js"></script>
 
 </body>
 </html>
