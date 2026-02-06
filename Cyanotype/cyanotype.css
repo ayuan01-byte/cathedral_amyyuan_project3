@@ -77,3 +77,8 @@ h1 {
     align-items: center;
 }
 
+button {
+    color: #4d88b8;
+    width: 100px;
+    height: 30px;
+}
