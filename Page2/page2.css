@@ -1,0 +1,167 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    background: #0a0a0a;
+    color: #ffffff;
+    overflow: hidden; /* Prevents scrollbars during animations */
+}
+
+h1 {
+    position: fixed;
+    top: 16px;
+    right: 43px;
+    font-size: 18px;
+    color: #ffffff;
+    z-index: 20;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.floating-img {
+    position: absolute; /* Allows positioning on the page */
+    width: 150px; 
+    height: auto;
+    opacity: 0; /* Starts invisible (shows the fade-in effect) */
+    pointer-events: auto; /* Allows clicking on the images */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.floating-img.drop-left {
+    animation: dropLeft 6s ease-in 1 forwards; 
+    /* 1 means the animation plays once, and forwards means it stays at the last keyframe */
+}
+
+.floating-img.drop-right {
+    animation: dropRight 6s ease-in 1 forwards;
+}
+
+.floating-img:hover {
+    animation-play-state: paused;
+    /* this pauses the animation when hovering over the image */
+}
+
+.delayed-text {
+    opacity: 0;
+    animation: showDelayedText 0.6s ease forwards;
+    animation-delay: 20s;
+    color:#ffffff;
+    font-size: 20px;
+    top: 40px; 
+    right: 16px;
+    position: fixed;
+}
+
+.delayed-text2 {
+    opacity: 0;
+    animation: showDelayedText2 0.6s ease forwards;
+    animation-delay: 23s;
+    color:#ffffff;
+    background-color: rgb(74, 74, 74, 0.5);
+    font-size: 30px;
+    position: fixed;
+    top: 120px;
+    right: 220px;
+    text-align: center;
+    font-style: italic;
+}
+
+.delayed-text3 {
+    opacity: 0;
+    animation: showDelayedText3 0.6s ease forwards;
+    animation-delay: 27s;
+    color:#ffffff;
+    background-color: rgb(74, 74, 74, 0.5);
+    font-size: 30px;
+    position: fixed;
+    top: 250px;
+    right: 330px;
+    text-align: center;
+    font-style: italic;
+}
+
+@keyframes showDelayedText {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes showDelayedText2 {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes showDelayedText3 {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Two-column animation: dropLeft is center-left, dropRight is center-right of the screen */
+@keyframes dropLeft {
+    0% { 
+        top: -20vh; 
+        left: 25%;
+        opacity: 0; 
+    }
+    10% { 
+        opacity: 1; 
+    }
+    60% { 
+        top: 60vh;
+        left: 25%;
+        opacity: 1; 
+    }
+    75% {
+        top: 70vh;
+        left: 25%;
+        opacity: 0;
+    }
+    /* When the image reaches roughly 75%, it starts to fade out, to create the illusion that images are entering the "computer screen" in js */
+    100% {
+        top: 100vh;
+        left: 25%;
+        opacity: 0;
+    }
+    /* This means when image reaches the bottom, it becomes invisible */
+}
+
+@keyframes dropRight {
+    0% { 
+        top: -35vh; 
+        right: 25%;
+        opacity: 0; 
+    }
+    10% { 
+        opacity: 1; 
+    }
+    60% { 
+        top: 60vh;
+        right: 25%;
+        opacity: 1; 
+    }
+    75% {
+        top: 70vh;
+        right: 25%;
+        opacity: 0;
+    }
+    100% {
+        top: 100vh;
+        right: 25%;
+        opacity: 0;
+    }
+}
+
+
+

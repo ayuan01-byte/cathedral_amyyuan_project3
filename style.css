@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+	background: #0f1522;
+	color: #e6f1ff;
+	font-family: "Roboto Mono", monospace;
+	letter-spacing: 0.5px;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;
+	opacity: 0;
+    /* forwards means animation does not loop, stays at the last keyframe */
+	animation: titleReveal 0.8s ease-out forwards; 
+	animation-delay: 1s;
+	text-shadow: 0 0 8px rgba(0, 255, 255, 0.35);
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.post-image {
+	width: 550px;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.button-container {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+button {
+	background: linear-gradient(180deg, #1b2333 0%, #0f1522 100%); /* linear-gradient() reference: https://www.w3schools.com/css/css3_gradients.asp */
+	color: #e6f1ff;
+	border: 1px solid #2c3b55;
+	padding: 12px 22px;
+	border-radius: 8px;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	cursor: pointer;
+	box-shadow: 0 0 0 rgba(0, 255, 255, 0);
+}
+
+button:hover {
+	transform: translateY(-2px);
+	border-color: #51e5ff;
+	box-shadow: 0 0 10px rgba(81, 229, 255, 0.35);
+}
+
+/* This animation will change opacity and position */
+@keyframes titleReveal {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+        /* transform adds a slide-up motion */
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

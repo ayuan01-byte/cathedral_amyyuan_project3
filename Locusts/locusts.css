@@ -1,0 +1,63 @@
+html, body, main {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+#locust-buttons {
+  display: flex;
+  gap: 3rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+
+.locust-button {
+  background: #8B4513;
+  color: #FFD700;
+  padding: 2rem;
+  font-size: 1.1rem;
+  display: inline-block;
+  border: 3px solid #FFD700;
+  cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.locust-button:hover {
+  background: #DAA520;
+  color: #FFFF00;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 1);
+  transform: scale(1.1);
+}
+
+.vertical-shake {
+  animation: vertical-shaking 0.15s infinite;
+}
+
+@keyframes vertical-shaking {
+  0% { transform: translateY(0) translateX(0) }
+  10% { transform: translateY(-20px) translateX(-5px) }
+  20% { transform: translateY(20px) translateX(5px) }
+  30% { transform: translateY(-20px) translateX(-5px) }
+  40% { transform: translateY(20px) translateX(5px) }
+  50% { transform: translateY(-20px) translateX(-5px) }
+  60% { transform: translateY(20px) translateX(5px) }
+  70% { transform: translateY(-20px) translateX(-5px) }
+  80% { transform: translateY(20px) translateX(5px) }
+  90% { transform: translateY(-20px) translateX(-5px) }
+  100% { transform: translateY(0) translateX(0) }
+}
+
+

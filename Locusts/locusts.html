@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="locusts.css">
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <main>
+      <div id="locust-buttons">
+        <!-- buttons inspired by https://mouchette.org/cat/index.html-->
+        <button class="locust-button vertical-shake">stop the swarm</button>
+        <button class="locust-button vertical-shake">let them spread</button>
+      </div>
+      <div>
+        <div id="overlay" style="position: fixed; top: 75%; left: 50%; transform: translate(-50%, -50%); font-size: 32px; color: white; text-align: center;"></div>
+      </div>
+    </main>
+
+    <script src="locusts.js"></script>
+    <script src="speech.js"></script>
+  </body>
+</html>

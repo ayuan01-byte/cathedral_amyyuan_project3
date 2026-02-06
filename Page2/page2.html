@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="page2.css">
+    <!-- p5.js is required for the canvas animation in screen.js -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>You tried to save:</h1>
+    <div id="counter" style="position: fixed; top: 16px; right: 16px; font-size: 20px; color: #fff; z-index: 20;">0</div>
+
+    <div class="floating-container">
+        <!-- Here, using the onclick attribute on an <img> tag, I adapted from this video which used onclick with buttons instead: https://www.youtube.com/watch?v=TXcjupbEst4 -->
+         <!-- So when the image (dull tone) is clicked, it changes to a new image (bright tone) -->
+        <img src="page2/d1.png" id="image1" class="floating-img drop-right" style="width: 300px; animation-delay: 0s;" onclick="changeImage1(); clickImage()">
+        <img src="page2/d2.png" id="image2" class="floating-img drop-left" style="width: 320px; animation-delay: 1s;" onclick="changeImage2(); clickImage()"> 
+        <img src="page2/d3.png" id="image3" class="floating-img drop-right" style="width: 350px; animation-delay: 2s;" onclick="changeImage3(); clickImage()">
+        <img src="page2/d4.png" id="image4" class="floating-img drop-left" style="width: 320px; animation-delay: 3s;" onclick="changeImage4(); clickImage()">
+        <img src="page2/d5.png" id="image5" class="floating-img drop-right" style="width: 300px; animation-delay: 4s;" onclick="changeImage5(); clickImage()">
+        <img src="page2/d6.png" id="image6" class="floating-img drop-left" style="width: 220px; animation-delay: 5s;" onclick="changeImage6(); clickImage()">
+        <img src="page2/d7.png" id="image7" class="floating-img drop-right" style="width: 150px; animation-delay: 6s;" onclick="changeImage7(); clickImage()">
+        <img src="page2/d8.png" id="image8" class="floating-img drop-left" style="width: 220px; animation-delay: 7s;" onclick="changeImage8(); clickImage()">
+        <img src="page2/d9.png" id="image9" class="floating-img drop-right" style="width: 200px; animation-delay: 8s;" onclick="changeImage9(); clickImage()">
+        <img src="page2/d10.png" id="image10" class="floating-img drop-left" style="width: 200px; animation-delay: 9s;" onclick="changeImage10(); clickImage()">
+        <img src="page2/d11.png" id="image11" class="floating-img drop-right" style="width: 100px; animation-delay: 10s;" onclick="changeImage11(); clickImage()">
+        <img src="page2/d12.png" id="image12" class="floating-img drop-left" style="width: 190px; animation-delay: 11s;" onclick="changeImage12(); clickImage()">
+        <img src="page2/d13.png" id="image13" class="floating-img drop-right" style="width: 150px; animation-delay: 12s;" onclick="changeImage13(); clickImage()">
+        <img src="page2/d14.png" id="image14" class="floating-img drop-left" style="width: 130px; animation-delay: 13s;" onclick="changeImage14(); clickImage()">
+    </div>
+
+        <p class="delayed-text">The system consumed all 14</p>
+        <p class="delayed-text2">Sometimes we feel seen, like how a bright cathedral print <br> appears when you click.</p>
+        <p class="delayed-text3">But hope is consumed by the system below.</p>
+        <!-- next is transitioning to the locusts page -->
+        <p class="delayed-text3" style="top: 400px; right: 100px;">After it consumes our data, it devours the earth. <a href="../Locusts/locusts.html">Click to witness.</a></p>
+    <script src="page2.js"></script>
+    <script src="screen.js"></script>
+    
+
+
+</body>
+</html>
