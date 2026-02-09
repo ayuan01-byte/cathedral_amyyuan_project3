@@ -17,10 +17,10 @@ function updateAndDrawLeaves() {
   }
 }
 
-//function to create 300 leaves on foliage background
+//function to create 200 leaves on foliage background
 function leafPower(){
   leaves = [];
-  for(let i = 0; i < 300; i++){
+  for(let i = 0; i < 200; i++){
     let leaf1 = createLeaf(random(width), random(height));
     leaves.push(leaf1);
   }
