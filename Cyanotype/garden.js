@@ -9,10 +9,7 @@ function setup() {
 function draw () {
     background('#184d27');
     updateAndDrawLeaves();
-    filter(BLUR, 1); 
-    // Blur 1 would reduce lag, but 3 has best visual effect + helps flowers images stand out more
-    // There are 300 leaves, I think it should not impact performance...
-}
+    }
 
 function updateAndDrawLeaves() {
   for (let i = 0; i < leaves.length; i++) { 
